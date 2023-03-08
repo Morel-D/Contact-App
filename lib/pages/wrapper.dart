@@ -1,4 +1,5 @@
 import 'package:contact/pages/authentication/landing.dart';
+import 'package:contact/pages/authentication/register.dart';
 import 'package:flutter/material.dart';
 
 class Wrapper extends StatelessWidget {
@@ -6,6 +7,6 @@ class Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Landing());
+    return SafeArea(child: Register());
   }
 }
