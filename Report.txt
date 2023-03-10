@@ -1,18 +1,19 @@
 Reprot of the project process 
 
 
-+Creating a userModel
++Streams & provider
 
-- Creating a user model class in the model folder
 
-user.dart
-- assign uid String and setit final 
+
+
 
 auth.dart
-- Creating a userModel method to handle the view of the uid
-- returning the uid of the results in the signAnonym function
+- Creating a stream method for alerting the changes of events 
 
-register.dart
--printing the uid of the user registered print(results.uid)
+- installing the provider package
+
+main.dart
+-importing of the provider packages, auth & user model 
+- application of streamProvider
 
 - Go to Go !!!

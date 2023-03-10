@@ -2,9 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:contact/model/user.dart';
 
 class AuthService {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   // Create a user object based in firebase
   UserModel? _usersFromDatabaseUsers(User? user) {
     return user != null ? UserModel(uid: user.uid) : null;
+  }
+
+  // auth change user stream
+  Stream<UserModel?> get onAuthStateChanged {
+    return _auth.authStateChanges().map(_usersFromDatabaseUsers);
   }
 
   // SignUp Anonymously
