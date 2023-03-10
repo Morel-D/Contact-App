@@ -1,0 +1,18 @@
+Reprot of the project process 
+
+
++flutter & firebase connection
+
+- installing firebase tools in the sytem 32
+- then logging in the firebase (  advice you to logout first)
+- activating the flutterfire
+- configuring the flutterfire 
+- installing the firebase_core
+
++ Testing the connection 
+
+- making some configurations in the main.dart
+- Creating a service dart file to signIn Anonymoulsy (of course you'll have to enable it in the firebase console)
+- Calling the funstion in the view page
+ 
+- Go to Go !!!

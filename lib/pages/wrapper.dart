@@ -1,4 +1,5 @@
 import 'package:contact/pages/authentication/landing.dart';
+import 'package:contact/pages/authentication/login.dart';
 import 'package:contact/pages/authentication/register.dart';
 import 'package:flutter/material.dart';
 

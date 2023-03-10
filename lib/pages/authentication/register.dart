@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:contact/shared/constant.dart';
+import 'package:contact/services/auth.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -10,6 +10,8 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final AuthService _authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class _RegisterState extends State<Register> {
             SizedBox(height: 10),
             Text('Connect with the world anywhere at'),
             Text(' anytime with HyApp'),
-            SizedBox(height: 50),
+            SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.fromLTRB(80, 5, 80, 20),
               child: Column(
@@ -44,7 +46,15 @@ class _RegisterState extends State<Register> {
                     width: 200,
                     height: 40,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        dynamic results = await _authService.signAnonym();
+
+                        if (results == null) {
+                          print("Results was not added");
+                        } else {
+                          print("Results was added");
+                        }
+                      },
                       child: Text(
                         'Register',
                         style: TextStyle(color: Colors.white),
