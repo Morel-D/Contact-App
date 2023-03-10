@@ -53,6 +53,7 @@ class _RegisterState extends State<Register> {
                           print("Results was not added");
                         } else {
                           print("Results was added");
+                          print(results.uid);
                         }
                       },
                       child: Text(

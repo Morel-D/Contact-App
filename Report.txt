@@ -1,18 +1,18 @@
 Reprot of the project process 
 
 
-+flutter & firebase connection
++Creating a userModel
 
-- installing firebase tools in the sytem 32
-- then logging in the firebase (  advice you to logout first)
-- activating the flutterfire
-- configuring the flutterfire 
-- installing the firebase_core
+- Creating a user model class in the model folder
 
-+ Testing the connection 
+user.dart
+- assign uid String and setit final 
 
-- making some configurations in the main.dart
-- Creating a service dart file to signIn Anonymoulsy (of course you'll have to enable it in the firebase console)
-- Calling the funstion in the view page
- 
+auth.dart
+- Creating a userModel method to handle the view of the uid
+- returning the uid of the results in the signAnonym function
+
+register.dart
+-printing the uid of the user registered print(results.uid)
+
 - Go to Go !!!
