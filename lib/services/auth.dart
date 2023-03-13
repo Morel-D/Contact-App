@@ -25,4 +25,14 @@ class AuthService {
       return null;
     }
   }
+
+  // Logout Anonumoulsy
+  Future logout() async {
+    try {
+      return await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 }

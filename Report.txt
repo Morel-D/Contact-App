@@ -1,19 +1,26 @@
 Reprot of the project process 
 
 
-+Streams & provider
++Sigup & sigout Anonymously
 
 
 
+auth.dart 
+
+- Creating a future class to logout once click on the button (a btn that will be assign in the home class)
 
 
-auth.dart
-- Creating a stream method for alerting the changes of events 
+wrapper.dart 
 
-- installing the provider package
+- creating a conditional sattement that will switch in respect to the authentication 
++ switch to home page if user is signed in
++ switch to signup page if user data is null
 
-main.dart
--importing of the provider packages, auth & user model 
-- application of streamProvider
+home.dart 
+
+- design ui layout with a btn to logout
+- create an instance of the auth.dart in the home page an assign it to a variable to access the logout method
+- assign the logout method to the button. 
+
 
 - Go to Go !!!
