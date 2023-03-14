@@ -5,22 +5,18 @@ Reprot of the project process
 
 
 
-auth.dart 
+authentication.dart
 
-- Creating a future class to logout once click on the button (a btn that will be assign in the home class)
+- class that will render eiher eamil or password
+- link this to the wrapper.dart
 
 
-wrapper.dart 
+login.dart & register.dart
 
-- creating a conditional sattement that will switch in respect to the authentication 
-+ switch to home page if user is signed in
-+ switch to signup page if user data is null
-
-home.dart 
-
-- design ui layout with a btn to logout
-- create an instance of the auth.dart in the home page an assign it to a variable to access the logout method
-- assign the logout method to the button. 
+- assigning email & password to datatype string
+- Implemanting onChange event on email & password 
+- printing the results on the terminal 
+ 
 
 
 - Go to Go !!!

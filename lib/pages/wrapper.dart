@@ -1,4 +1,5 @@
 import 'package:contact/model/user.dart';
+import 'package:contact/pages/authentication/authenticate.dart';
 import 'package:contact/pages/authentication/landing.dart';
 import 'package:contact/pages/authentication/login.dart';
 import 'package:contact/pages/authentication/register.dart';
@@ -16,7 +17,7 @@ class Wrapper extends StatelessWidget {
     print(user);
 
     if (user == null) {
-      return SafeArea(child: Login());
+      return SafeArea(child: Authenticate());
     } else {
       return SafeArea(child: Home());
     }
