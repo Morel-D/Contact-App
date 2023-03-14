@@ -1,21 +1,21 @@
 Reprot of the project process 
 
 
-+Toogle
++Register & signup with email & password
 
 
 
-authentication.dart
+auth.dart
 
-- create a vraible of datatype bool
-- create a void function that will diplay the inverse bool of the assign vraiable
-- pass on the funtion name as parameters in the various classes & create a construtor to receive the various parameters 
+- Create function for signUp & register
 
 
 login.dart & register.dart
 
-- create a construtor
-- on the btn assign the variuos assigned contructors
+- do not forget the key
+- condtions for filling the Form
+- btn click event
+- error handeling in case the crdentials are false
  
 
 

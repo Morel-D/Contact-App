@@ -1,3 +1,4 @@
+import 'package:contact/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/shared/constant.dart';
 
@@ -13,14 +14,19 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final AuthService _authService = AuthService();
+  final _formKey = GlobalKey<FormState>();
+
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Form(
+          key: _formKey,
           child: Column(
             children: [
               SizedBox(height: 30),
@@ -38,14 +44,18 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.fromLTRB(80, 5, 80, 20),
                 child: Column(
                   children: [
-                    TextField(
+                    TextFormField(
+                        validator: (val) =>
+                            val!.isEmpty ? "Please fill in email" : null,
                         onChanged: (val) {
                           email = val;
                         },
                         decoration:
                             feildInput.copyWith(hintText: "Enter Email")),
                     SizedBox(height: 20),
-                    TextField(
+                    TextFormField(
+                      validator: (val) =>
+                          val!.isEmpty ? "Please fill in the password" : null,
                       onChanged: (val) {
                         password = val;
                       },
@@ -53,14 +63,24 @@ class _LoginState extends State<Login> {
                           feildInput.copyWith(hintText: "Enter Password"),
                       obscureText: true,
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 20),
+                    Text(error, style: TextStyle(color: Colors.red)),
+                    SizedBox(height: 20),
                     SizedBox(
                       width: 200,
                       height: 40,
                       child: TextButton(
-                        onPressed: () {
-                          print(email);
-                          print(password);
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            dynamic results =
+                                await _authService.login(email, password);
+
+                            if (results == null) {
+                              setState(() {
+                                error = "Email or password Incorrect";
+                              });
+                            }
+                          }
                         },
                         child: Text(
                           'Login',

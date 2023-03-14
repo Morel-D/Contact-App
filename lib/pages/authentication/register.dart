@@ -14,15 +14,18 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final AuthService _authService = AuthService();
+  final _formKey = GlobalKey<FormState>();
 
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Form(
+          key: _formKey,
           child: Column(
             children: [
               SizedBox(height: 30),
@@ -41,14 +44,17 @@ class _RegisterState extends State<Register> {
                 padding: const EdgeInsets.fromLTRB(80, 5, 80, 20),
                 child: Column(
                   children: [
-                    TextField(
+                    TextFormField(
+                        validator: (val) => val!.isEmpty ? "Empty Email" : null,
                         onChanged: (val) {
                           email = val;
                         },
                         decoration:
                             feildInput.copyWith(hintText: "Enter Email")),
                     SizedBox(height: 20),
-                    TextField(
+                    TextFormField(
+                      validator: (val) =>
+                          val!.isEmpty ? "Empty password" : null,
                       onChanged: (val) {
                         password = val;
                       },
@@ -56,14 +62,23 @@ class _RegisterState extends State<Register> {
                           feildInput.copyWith(hintText: "Enter Password"),
                       obscureText: true,
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 20),
+                    Text(error, style: TextStyle(color: Colors.red)),
+                    SizedBox(height: 20),
                     SizedBox(
                       width: 200,
                       height: 40,
                       child: TextButton(
                         onPressed: () async {
-                          print(email);
-                          print(password);
+                          if (_formKey.currentState!.validate()) {
+                            dynamic resluts =
+                                await _authService.regiter(email, password);
+                            if (resluts == null) {
+                              setState(() {
+                                error = "Email format not correct";
+                              });
+                            }
+                          }
                         },
                         child: Text(
                           'Register',

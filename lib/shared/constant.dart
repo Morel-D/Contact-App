@@ -9,3 +9,17 @@ const feildInput = InputDecoration(
     focusedBorder: OutlineInputBorder(
         borderSide:
             BorderSide(color: Color.fromARGB(255, 42, 115, 146), width: 2.0)));
+
+
+
+//  Container(
+//                       padding: EdgeInsets.fromLTRB(90, 10, 90, 10),
+//                       decoration: BoxDecoration(
+//                         border: Border.all(width: 0.5, color: Colors.red),
+//                         borderRadius: BorderRadius.circular(2),
+//                       ),
+//                       child: Text(
+//                         "Email format not correct",
+//                         style: TextStyle(color: Colors.red),
+//                       ),
+//                     ),
