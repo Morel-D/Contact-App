@@ -3,7 +3,10 @@ import 'package:contact/shared/constant.dart';
 import 'package:contact/services/auth.dart';
 
 class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+  // const Register({Key? key}) : super(key: key);
+
+  final Function toogleForm;
+  Register({required this.toogleForm});
 
   @override
   _RegisterState createState() => _RegisterState();
@@ -72,7 +75,9 @@ class _RegisterState extends State<Register> {
                     ),
                     SizedBox(height: 20),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          widget.toogleForm();
+                        },
                         child: Text("Already have an account ?")),
                   ],
                 ),

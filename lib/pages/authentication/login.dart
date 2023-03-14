@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:contact/shared/constant.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  // const Login({Key? key}) : super(key: key);
+
+  final Function toogleForm;
+
+  Login({required this.toogleForm});
 
   @override
   _LoginState createState() => _LoginState();
@@ -68,7 +72,9 @@ class _LoginState extends State<Login> {
                     ),
                     SizedBox(height: 20),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          widget.toogleForm();
+                        },
                         child: Text("Already have an account ?")),
                   ],
                 ),

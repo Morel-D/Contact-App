@@ -1,21 +1,21 @@
 Reprot of the project process 
 
 
-+Sigup & sigout Anonymously
++Toogle
 
 
 
 authentication.dart
 
-- class that will render eiher eamil or password
-- link this to the wrapper.dart
+- create a vraible of datatype bool
+- create a void function that will diplay the inverse bool of the assign vraiable
+- pass on the funtion name as parameters in the various classes & create a construtor to receive the various parameters 
 
 
 login.dart & register.dart
 
-- assigning email & password to datatype string
-- Implemanting onChange event on email & password 
-- printing the results on the terminal 
+- create a construtor
+- on the btn assign the variuos assigned contructors
  
 
 
