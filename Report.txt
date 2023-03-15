@@ -1,21 +1,24 @@
 Reprot of the project process 
 
 
-+Register & signup with email & password
++Loading event in login & register
 
 
 
-auth.dart
+pubspec.yaml
 
-- Create function for signUp & register
+- add the spinkit package
+
+
+loading.dart 
+
+- implement the loading event
 
 
 login.dart & register.dart
 
-- do not forget the key
-- condtions for filling the Form
-- btn click event
-- error handeling in case the crdentials are false
+- import the loading class in the flies
+- create a boolean operator that will display in respsect to the btn clcik and the events 
  
 
 
