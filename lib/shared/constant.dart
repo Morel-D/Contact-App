@@ -23,3 +23,20 @@ const feildInput = InputDecoration(
 //                         style: TextStyle(color: Colors.red),
 //                       ),
 //                     ),
+
+
+
+// card 
+
+
+//  Card(
+//               margin: EdgeInsets.fromLTRB(20.0, 6.0, 20.0, 0),
+//               child: ListTile(
+//                 leading: CircleAvatar(
+//                   radius: 25.0,
+//                   backgroundColor: Color.fromARGB(255, 42, 115, 146),
+//                 ),
+//                 title: Text("Morel Denzel"),
+//                 subtitle: Text(' flavour'),
+//               ),
+//             ),

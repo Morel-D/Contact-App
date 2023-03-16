@@ -1,24 +1,26 @@
 Reprot of the project process 
 
 
-+Loading event in login & register
++Firestore enable & addpage design
 
 
 
-pubspec.yaml
+Cloud firesore (browser)
 
-- add the spinkit package
-
-
-loading.dart 
-
-- implement the loading event
+- enable firestore
 
 
-login.dart & register.dart
+database.dart
 
-- import the loading class in the flies
-- create a boolean operator that will display in respsect to the btn clcik and the events 
+- create a firesore instance
+
+
+
++ design the add.dart file
+
+
+main.dart 
+- Create a route for the main classes 
  
 
 

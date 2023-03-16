@@ -5,6 +5,8 @@ import 'firebase_options.dart';
 import 'package:contact/model/user.dart';
 import 'package:contact/services/auth.dart';
 import 'package:provider/provider.dart';
+import 'package:contact/pages/home/home.dart';
+import 'package:contact/pages/home/add.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +23,10 @@ class MyApp extends StatelessWidget {
         initialData: null,
         value: AuthService().onAuthStateChanged,
         builder: (context, snapshot) {
-          return MaterialApp(
-              debugShowCheckedModeBanner: false, home: Wrapper());
+          return MaterialApp(routes: {
+            '/home': (context) => Home(),
+            '/add': (context) => Add()
+          }, debugShowCheckedModeBanner: false, home: Wrapper());
         });
   }
 }

@@ -3,6 +3,7 @@ import 'package:contact/pages/authentication/authenticate.dart';
 import 'package:contact/pages/authentication/landing.dart';
 import 'package:contact/pages/authentication/login.dart';
 import 'package:contact/pages/authentication/register.dart';
+import 'package:contact/pages/home/add.dart';
 import 'package:contact/pages/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
