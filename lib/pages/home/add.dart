@@ -10,7 +10,7 @@ class Add extends StatefulWidget {
 }
 
 class _AddState extends State<Add> {
-  final Databases _databases = Databases();
+  final Databases _databases = Databases(uid: '');
   final _formkey = GlobalKey<FormState>();
 
   String name = "";

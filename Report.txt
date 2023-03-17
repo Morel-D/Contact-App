@@ -1,23 +1,31 @@
 Reprot of the project process 
 
 
-+Add Data to the database
++View data
 
 
 
 
 
-- Create records.dart and assign vriables 
+
 
 
 database.dart
 
-- create a function that will add data to the database
+- Create a stream of type QuerySnapshot the returns the collect
 
 
 
-add.dart 
-- fit those info to the class 
+home.dart
+
+- wrap the Scaffold Widget with StreamProvider of type QuerySnapshot
+- Create a class recordsList.dart
+
+
+
+recordsList.dart 
+- assign a provider of type QuerySnapshot to a varible
+- loop over that varible
  
 
 

@@ -5,6 +5,10 @@ final CollectionReference collection =
     FirebaseFirestore.instance.collection("contacts");
 
 class Databases {
+  final String uid;
+
+  Databases({required this.uid});
+
   // CRUD OPERATION
 
   // Create Records
@@ -21,5 +25,10 @@ class Databases {
     } catch (e) {
       print("An error occurerd : ${e.toString()}");
     }
+  }
+
+  // Read Records
+  Stream<QuerySnapshot> get records {
+    return collection.snapshots();
   }
 }
