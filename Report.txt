@@ -1,26 +1,23 @@
 Reprot of the project process 
 
 
-+Firestore enable & addpage design
++Add Data to the database
 
 
 
-Cloud firesore (browser)
 
-- enable firestore
+
+- Create records.dart and assign vriables 
 
 
 database.dart
 
-- create a firesore instance
+- create a function that will add data to the database
 
 
 
-+ design the add.dart file
-
-
-main.dart 
-- Create a route for the main classes 
+add.dart 
+- fit those info to the class 
  
 
 
